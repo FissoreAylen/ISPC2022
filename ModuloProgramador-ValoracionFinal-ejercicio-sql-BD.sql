@@ -93,6 +93,12 @@ VALUES
 ("2018/07/26", 14, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tincidunt est. Aenean et urna odio.", 1000),
 ("2022/07/26", 2, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at tincidunt est. Aenean et urna odio.", 1500);
 
+
 # Ahora viene el ejercico de la consulta.
 # 7. Obtener los ingresos percibidos en Julio del 2022
+
+# Primera forma, obtenemos todas las columnas con los montos separados en dicho periodo de tiempo
+SELECT `Monto` FROM `peluqueriacanina`.`historial` WHERE MONTH(`Fecha`) = 7 AND YEAR(`Fecha`) = 2022;
+
+# Segunda forma, obtenemos los ingresos totales, o sea, la suma de todos los montos en dicho periodo de tiempo
 SELECT SUM(`Monto`) FROM `peluqueriacanina`.`historial` WHERE MONTH(`Fecha`) = 7 AND YEAR(`Fecha`) = 2022;
