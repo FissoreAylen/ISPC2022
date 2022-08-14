@@ -1,28 +1,6 @@
-Skip to content
-FissoreAylen
-/
-ISPC2022
-Public
-Code
-Issues
-9
-Pull requests
-2
-Actions
-Projects
-1
-Wiki
-Security
-Insights
-Base de Datos - Sql Ejercicio 9
- main (#22)
 
-FissoreAylen committed yesterday
-1 parent 28ebb27 commit 04df6ba2770914a5bff26c0a22499d648c7f9833
-Showing 1 changed file with 73 additions and 0 deletions.
- 73  
-Base de Datos - Ejercicio 9.sql
-@@ -0,0 +1,73 @@
+
+
 /*Crear base de datos segun modelo relacional*/
 
 CREATE DATABASE peluqueriaCanina;   --creamos una tabla
