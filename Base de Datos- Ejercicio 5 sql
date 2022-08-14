@@ -1,0 +1,87 @@
+Skip to content
+FissoreAylen
+/
+ISPC2022
+Public
+Code
+Issues
+9
+Pull requests
+2
+Actions
+Projects
+1
+Wiki
+Security
+Insights
+Base de Datos - Sql Ejercicio 9
+ main (#22)
+
+FissoreAylen committed yesterday
+1 parent 28ebb27 commit 04df6ba2770914a5bff26c0a22499d648c7f9833
+Showing 1 changed file with 73 additions and 0 deletions.
+ 73  
+Base de Datos - Ejercicio 9.sql
+@@ -0,0 +1,73 @@
+/*Crear base de datos segun modelo relacional*/
+
+CREATE DATABASE peluqueriaCanina;   --creamos una tabla
+
+USE peluqueriaCanina;   -- elegimos la tabla con que deseamos trabajar
+
+/* Necesitamos crear el contenido = Tablas
+                                        elementos con atributos
+                                        
+Identificar
+    Claves Primarias = PRIMARY KEY
+    Claves Foráneas = FOREIGN KEY */
+
+-- TIP Empezar por las tablas independientes, sin clave foránea.
+
+
+-- Tabla Dueno
+
+CREATE TABLE Dueno (
+    DNI int(8) NOT NULL,
+    Nombre_dueno varchar(150),
+    Apellido varchar(150),
+    Telefono bigint,
+    Direccion varchar(250),
+    PRIMARY KEY (DNI)
+);
+
+-- Tabla Perro
+
+CREATE TABLE Perro (
+    ID_Perro int(11) NOT NULL,
+    Nombre-perro varchar(50),
+    Fecha_nac DATE,
+    Sexo varchar(20),
+    Nombre_dueno varchar(150),
+    PRIMARY KEY (ID_Perro),
+    FOREIGN KEY (Nombre_dueno) REFERENCES Dueno(Nombre)
+);
+
+
+-- Inserto los datos del dueño
+insert into Dueno values(39937120,"Aylen","Fissore Vergara",3516190729,"12 de octubre 1747");
+
+-- Inserto los datos del perro
+insert into Perro values(7,"Diana",20160305,"hembra",39937120);
+
+
+/* EJERCICIO - Realice una consulta multitabla que arroje el nombre de todos los perros cuyos dueños se llamen Pedro  */
+
+
+SELECT column-Nombre_dueno 
+    FROM table- Dueno
+    INNER JOIN table-Perro 
+     where Nombre_dueno= Pedro
+    
+
+
+  
+
+
+
+ 
