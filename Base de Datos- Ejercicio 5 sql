@@ -1,6 +1,4 @@
 
-
-
 /*Crear base de datos segun modelo relacional*/
 
 CREATE DATABASE peluqueriaCanina;   --creamos una tabla
